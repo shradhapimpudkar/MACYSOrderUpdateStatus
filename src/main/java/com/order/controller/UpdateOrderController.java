@@ -17,7 +17,8 @@ public class UpdateOrderController {
 	@Autowired
 	UpdateOrderService updateOrderService;
 
-	@PutMapping(value = "/statusUpdate", consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
+	@PutMapping(value = "/statusUpdate",
+			consumes = { MediaType.APPLICATION_JSON_VALUE, MediaType.APPLICATION_XML_VALUE })
 	public ResponseEntity<String> updateOrder(@RequestBody UpdateOrderStatus updateOrderStatus) {
 		return updateOrderService.updateOrder(updateOrderStatus);
 	}
